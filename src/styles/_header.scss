@@ -1,0 +1,45 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    &__logo_img {
+        height: 4rem;
+    }
+    &__nav_desktop__list {
+        display: flex;
+        gap: 1rem;
+    }
+}
+
+h1 {
+    position: absolute;
+    width: 1px;
+    height: 1px; 
+    padding: 0;
+    margin: -1;
+    overflow: hidden;
+    border: 0; 
+    clip-path: inset(50%);
+    white-space: no wrap
+}
+
+@media screen and (max-width: $desktop) {
+    .header__nav_desktop {
+        display: none;
+    }
+
+    .header__nav_mobile {
+        display: flex; 
+    }
+}
+
+@media screen and (min-width: $desktop) {
+    .header__nav_desktop {
+        display: flex;
+    }
+
+    .header__nav_mobile {
+        display: none; 
+    }
+}

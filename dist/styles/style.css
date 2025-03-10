@@ -1,0 +1,222 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: museo;
+  font-weight: 300;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "codeconf";
+  src: url("../fonts/codeconf/codeconf.woff?oat0m9") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=icon-]:before,
+[class*=" icon-"]:before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "codeconf" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-hour:before {
+  content: "\e900";
+}
+
+.icon-pin:before {
+  content: "\e901";
+}
+
+.icon-burger:before {
+  content: "\e93e";
+}
+
+.icon-schedule:before {
+  content: "\e93f";
+}
+
+.icon-loop:before {
+  content: "\e940";
+}
+
+.icon-contact:before {
+  content: "\e941";
+}
+
+.icon-event:before {
+  content: "\e942";
+}
+
+.icon-home:before {
+  content: "\e943";
+}
+
+.icon-card:before {
+  content: "\e944";
+}
+
+.icon-paypal:before {
+  content: "\e945";
+}
+
+.icon-tw:before {
+  content: "\e946";
+}
+
+.icon-slack:before {
+  content: "\e947";
+}
+
+.icon-heart_full:before {
+  content: "\e948";
+}
+
+.icon-heart_line:before {
+  content: "\e949";
+}
+
+.icon-square_full:before {
+  content: "\e94a";
+}
+
+.icon-square_line:before {
+  content: "\e94b";
+}
+
+.icon-spade_full:before {
+  content: "\e94c";
+}
+
+.icon-spade_line:before {
+  content: "\e94d";
+}
+
+.icon-clover_full:before {
+  content: "\e94e";
+}
+
+.icon-clover_line:before {
+  content: "\e94f";
+}
+
+@font-face {
+  font-family: "museo";
+  src: url("../fonts/museo/museo300.woff") format("woff"), url("../fonts/museo300.woff2") format("woff2");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "museo";
+  src: url("../fonts/museo/museo500.woff") format("woff"), url("../fonts/museo500.woff2") format("woff2");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "museo";
+  src: url("../fonts/museo/museo700.woff") format("woff"), url("../fonts/museo700.woff2") format("woff2");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "maven";
+  src: url("../fonts/maven_Pro/MavenPro-VariableFont_wght.ttf") format("truetype");
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+.header__logo_img {
+  height: 4rem;
+}
+.header__nav_desktop__list {
+  display: flex;
+  gap: 1rem;
+}
+
+h1 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1;
+  overflow: hidden;
+  border: 0;
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  white-space: no wrap;
+}
+
+@media screen and (max-width: 1024px) {
+  .header__nav_desktop {
+    display: none;
+  }
+  .header__nav_mobile {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .header__nav_desktop {
+    display: flex;
+  }
+  .header__nav_mobile {
+    display: none;
+  }
+}
+.banner {
+  height: 10rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: purple;
+  padding-inline-start: 5rem;
+}
+.banner img {
+  height: 14rem;
+  width: 14rem;
+}
+.banner__text {
+  width: 25%;
+}
+
+.speakers__breadcrumb__list {
+  display: flex;
+}
+.speakers__container {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.speaker {
+  border: solid 1px #888;
+}
+
+.form_speaker {
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */

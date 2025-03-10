@@ -1,0 +1,36 @@
+.banner {
+    height: 10rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: purple;
+    padding-inline-start: 5rem;
+    img {
+        height: 14rem;
+        width: 14rem;
+    }
+    &__text {
+        width: 25%;
+    }
+}
+
+.speakers {
+    &__breadcrumb__list {
+        display: flex;
+    }
+    &__container {
+        padding: 1rem;
+        display: grid; 
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+    }
+}
+
+.speaker {
+    border: solid 1px #888
+}
+
+.form_speaker {
+    text-align: center;
+}
