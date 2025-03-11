@@ -1,36 +1,266 @@
+//bannière
+
 .banner {
     height: 10rem;
     position: relative;
+    background-color: var(--purple);
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    background-color: purple;
-    padding-inline-start: 5rem;
+    //padding-inline-start: 5rem;
+    //position: relative;
+    &::before {
+        content: "";
+        height: 2rem;
+        width: 10rem;
+        background: url("../images/elts/pattern-stripes-left.png");
+        background-size: cover;
+        position: absolute;
+        inset-block: 0 auto;
+        margin-block-start: -1rem;
+        //margin-inline-start: -85rem;
+    }
+    &::after {
+        content: "";
+        height: 2rem;
+        width: 23rem;
+        background: url("../images/elts/pattern-stripes-right.png");
+        background-size: cover;
+        position: absolute;
+        inset-inline: auto 0;
+        inset-block: 0 auto;
+        margin-block-start: -1rem;
+        //margin-block-end: -0.5rem;
+    }
+    &__inside {
+        margin-inline-start: 5%;
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    picture {
+        display: flex;
+    }
     img {
         height: 14rem;
         width: 14rem;
     }
     &__text {
-        width: 25%;
+        width: 41%;
+        color: var(--white);
+        margin: 2rem;
+    }
+    &__title {
+        font-size: 2rem;
+        margin-block-end: 0.8rem;
     }
 }
 
+/*.banner {
+    height: 10rem;
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: var(--purple);
+    //padding-inline-start: 5rem;
+    //position: relative;
+    &::before {
+        content: "";
+        height: 2rem;
+        width: 10rem;
+        background: url("../images/elts/pattern-stripes-left.png");
+        background-size: cover;
+        position: absolute;
+        inset-block: 0 auto;
+        //margin-inline-start: -85rem;
+    }
+    &::after {
+        content: "";
+        height: 2rem;
+        width: 23rem;
+        background: url("../images/elts/pattern-stripes-right.png");
+        background-size: cover;
+        position: absolute;
+        inset-inline: auto 0;
+        inset-block: 0 auto;
+        //margin-block-end: -0.5rem;
+    }
+    picture {
+        display: flex;
+    }
+    img {
+        height: 14rem;
+        width: 14rem;
+    }
+    &__text {
+        width: 41%;
+        color: var(--white);
+        margin: 2rem;
+    }
+    &__title {
+        font-size: 2rem;
+        margin-block-end: 0.8rem;
+    }
+}*/
+
+//speaker
 .speakers {
     &__breadcrumb__list {
         display: flex;
+        gap: 1rem; 
     }
     &__container {
-        padding: 1rem;
+        padding-inline: 2rem;
+        padding-block: 0.5rem 5rem;
         display: grid; 
         grid-template-columns: repeat(4, 1fr);
-        gap: 1rem;
+        gap: 2rem;
     }
 }
 
 .speaker {
-    border: solid 1px #888
+    //border: solid 1px #888;
+    &__cover{
+        //border: 1px solid #000;
+        //display: flex;
+        position: relative;
+        img{
+            aspect-ratio:1; 
+        }
+        &::after {
+            content: "";
+            height: 2rem;
+            width: 10rem;
+            background: url("../images/elts/pattern_stripes.png");
+            background-size: cover;
+            position: absolute;
+            inset-inline: auto 0;
+            inset-block: auto 0;
+            margin-block-end: -0.5rem;
+        }
+        &__button{
+            width: 6rem;
+            height: 6rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            border-radius: 20rem;
+            background: var(--orange);
+            color: var(--white);
+            border: none;
+            font-size: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+    &__info{
+        padding: 1rem;
+        h3{
+            margin-block-end: 0.6rem;
+        }
+    }
+    &__details {
+        background: var(--light-orange);
+        padding-inline: 1rem;
+        padding-block: 1.5rem;
+    }
+    &__name {
+        font-weight: 300;
+        color: var(--name-black);
+        display: flex;
+        flex-direction: column;
+        font-size: 1.5rem;
+        margin-block-end: 4rem;
+    }
+    &__location {
+        font-family: leaguespartan;
+        font-size: 1.3rem;
+        color: var(--grey);
+    }
+    &__title {
+        font-weight: 500;
+        font-size: 1.15rem;
+        margin-block-end: 0.3rem;
+        //width: 90%;
+    }
+    &__text {
+        font-family: maven;
+        font-size: 0.9rem;
+    }
+    &__footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap : 1rem;
+        margin-block-start: 4rem;
+    }
+    &__time {
+        font-family: leaguespartan;
+        font-weight: 370;
+    }
+    &__button {
+        background: none;
+        border: 1.5px solid var(--orange);
+        color: var(--orange);
+        border-radius: 20rem;
+        padding-block: 0.5rem 0.6rem;
+        padding-inline: 1rem;
+        font-size: 0.9rem;
+    }
+}
+//je pense peu etre pour l'espacement entre les lignes dans le dos de la carte faut peu être mieux fixer une taille à la carte, puis faire un display flex, direction column, puis faire un justify content c'est à tester mdr mais plus tard parce que mon cerveu meurt
+
+//form
+.form_speaker {
+    background: var(--white);
+    box-shadow: 1rem 1rem 2rem 1rem #8884;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    &__text {
+        width: 30rem;
+    }
+    &__prompts {
+        width: 50rem; 
+        display : grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 1rem;
+    }
+}
+.form_speaker__name {
+    grid-area: 1/1;
+}
+.form_speaker__mail {
+    grid-area: 1/2;
+}
+.form_speaker__subject {
+    grid-area: 2/1;
+}
+.form_speaker__keywords {
+    grid-area: 2/2;
+}
+.form_speaker__detail {
+    //border: 1px solid #888;
+    grid-area: 3/1/-1/-1;
 }
 
-.form_speaker {
-    text-align: center;
+input {
+    width: 100%;
+}
+label {
+    position: absolute;
+    width: 1px;
+    height: 1px; 
+    padding: 0;
+    margin: -1;
+    overflow: hidden;
+    border: 0; 
+    clip-path: inset(50%);
+    white-space: no wrap
 }

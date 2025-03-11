@@ -9,7 +9,7 @@
 
 
 <body>
-    <div class="wrapper">
+    <section class="wrapper">
         <header class="header">
             <div class="header__logo">
                  <h1 class="header__title">CodeConv 2025 </h1>
@@ -32,9 +32,9 @@
                         <a href="" class="header__nav_desktop__link" >Contact</a>
                     </li>
                     <li class="header__nav_desktop__item">
-                        <a href="" class="header__nav_desktop__link" ><span class="icon-schedule"></span>Schedule</a>
+                        <a href="" class="header__nav_desktop__link" ><span class="icon-schedule"> </span>Schedule</a>
                     </li>
-                    <li class="header__nav_desktop__item"><button><span class="icon-loop"></span></button></li>
+                    <li class="header__nav_desktop__item"><button class="icon-loop"></button></li>
                 </ul>
             </nav>
 
@@ -47,6 +47,32 @@
 
         <main>
             <section class="banner">
+                <div class="banner__inside">
+                    <div class="banner__image_container">
+                        <picture>
+                            <source
+                              srcset="images/page-picture/presents@3x.png"
+                              media="(min-width: 900px)"
+                            />
+                            <source
+                              srcset="images/page-picture/presents@2x.png"
+                              media="(min-width: 600px)"
+                            />
+                            <img
+                              src="images/page-picture/presents.png"
+                              alt="portrait of a bearded man with a microphone"
+                              class="banner__image"
+                            />
+                          </picture>
+                    </div>
+                    <div class="banner__text">
+                        <h2 class="banner__title">Speaker Edition 2025</h2>
+                        <p class="banner__paragraph">Discover the speakers and the topics or suggest your own topic for our next event</p>
+                    </div>
+                </div>
+            </section>
+
+            <!--<section class="banner">
                 <div class="banner__image_container">
                     <picture>
                         <source
@@ -68,7 +94,7 @@
                     <h2 class="banner__title">Speaker Edition 2025</h2>
                     <p class="banner__paragraph">Discover the speakers and the topics or suggest your own topic for our next event</p>
                 </div>
-            </section>
+            </section>-->
 
             <section class="speakers">
                 <nav aria-label="Breadcrumb" class="speakers__breadcrumb">
@@ -77,25 +103,34 @@
                         <li class="speakers__breadcrumb__item"><a href="">Speakers</a></li>
                     </ul>
                 </nav>
+
+
+
                 <div class="speakers__container">
                     <div class="speaker">
-                        <div class="speaker__front">
-                            <div class="speaker__images">
-                                <img src="images/orators/chris@3x.jpg" alt="Chris Coyier">
-                                <button class="speaker__images__button">More info</button>
-                            </div>
-                            <h3 class="speaker__name">Chris Coyier</h3>
+                        <div class="speaker__cover">
+                            <img src="images/orators/chris@3x.jpg" alt="Chris Coyier">
+                            <button class="speaker__cover__button">More <span>info</span></button>
+                        </div>
+                        <div class="speaker__info">
+                            <h3 class="speaker__name">Chris <span>Coyier</span></h3>
                             <p class="speaker__location">Milwaukee, WI</p>
                         </div>
-                        <div class="speaker__back">
+                        <div class="speaker__details">
                             <h3 class="speaker__name">Chris Coyier</h3>
                             <h4 class="speaker__title">The All-Powerful Front-End Developer</h4>
                             <p class="speaker__text">Without servers, we'd have no way to share our creations with the world</p>
-                            <p class="speaker__time">09:30 am</p>
-                            <p class="speaker__place">R1</p>
-                            <button class="speaker__button">About</button>
+                            <footer class="speaker__footer">
+                                <p class="speaker__time"><time datetime="">09:30 am</time> <span class="speaker__place">R1</span></p>
+                                <button class="speaker__button">About</button>
+                            </footer>
                         </div>
                     </div>
+
+
+
+
+
                     <div class="speaker">
                         <div class="speaker__front">
                             <div class="speaker__images">
@@ -159,53 +194,57 @@
                     <h3 class="form_speaker__sec_title">Do you have a topic that you like?</h3>
                     <p class="form_speaker__paragraph_intro">Submit it for the next event by filling out the form below. Do not forget to specify the subject and the related keywords</p>
                 </div>
-                <div class="form_speaker__prompts">
-                    <form action="">
+                
+                <form action="">
+                    <section class="form_speaker__prompts">
                         <div class="form_speaker__name">
                             <label for="input_name">Name</label>
-                            <input type="text" id="input_name">
+                            <input type="text" id="input_name" placeholder="Name*">
                         </div>
                         <div class="form_speaker__mail">
                             <label for="input_mail">Mail</label>
-                            <input type="text" id="input_mail">
+                            <input type="text" id="input_mail" placeholder="Mail*">
                         </div>
                         <div class="form_speaker__subject">
                             <label for="input_subject">Subject</label>
-                            <input type="text" id="input_subject">
+                            <input type="text" id="input_subject" placeholder="Your Subject*">
                         </div>
                         <div class="form_speaker__keywords">
                             <label for="input_keywords">Keywords</label>
-                            <input type="text" id="input_keywords">
+                             <input type="text" id="input_keywords" placeholder="Keywords*">
                         </div>
                         <div class="form_speaker__detail">
                             <label for="input_detail">Short detail</label>
-                            <input type="text" id="input_detail">
-                        </div>
-                        <button class="form_speaker__button">Send your subject</button>
-                    </form>
-                    <p class="form_speaker__paragraph_outro">or just participate to the present event</p>
-                </div>
+                             <input type="text" id="input_detail" placeholder="Short details*">
+                         </div>
+                     </section>
+                     <button class="form_speaker__button">Send your subject</button>
+                </form>
+                <p class="form_speaker__paragraph_outro">or just participate to the present event</p>
             </section>
         </main>
 
 
+
         <footer class="footer">
-            <div class="ticket">
-                <button class="ticket__button">
+            <div class="footer__ticket">
+                <button class="footer__ticket__button">
                     get ticket 
                     <span class="icon-card"></span> 
                     <span class="icon-paypal"></span>
                 </button>
-                <p class="ticket__price">$199 USD</p>
+                <p class="footer__ticket__price">$199 USD</p>
             </div>
-            <div class="footer__info">
-                <h2 class="footer__title">The Las Vegas Convention Center</h2>
+            <section class="footer__info">
+                <div class="footer__text">
+                    <h2 class="footer__title">The Las Vegas Convention Center</h2>
                 <p class="footer__location"><strong>3150 Paradise Rd, Las Vegas, NV 89109</strong></p>
                 <p class="footer__paragraph">The Las Vegas Convention Center (LVCC), located adjacent to the Las Vegas Strip, encompasses approximately 3.2 million square feet with exhibit space of 2 million square feet and meeting space of nearly 250,000 square feet.</p>
+                </div>
                 <img src="images/page-picture/lasvegas_conventioncenter.png" alt="the Las Vegas convention center" class="footer__image">
-            </div>
-            <div class="sponsors">
-                <ul class="sponsors__list">
+            </section>
+            <div class="footer__sponsors">
+                <ul class="footer__sponsors__list">
                     <li class="sponsors__item">Cisco</li>
                     <li class="sponsors__item">Amazon Web Services</li>
                     <li class="sponsors__item">Nickelodeon</li>
@@ -215,28 +254,28 @@
                 </ul>
             </div>
             <div class="footer__group">
-                <div class="socials">
-                    <h3 class="socials__title">Follow us</h3>
-                    <ul class="socials__list">
-                        <li class="social__item">
-                            <a href="" class="socials__link"><span class="icon-slack"></span>#codeconf2025</a>
+                <div class="footer__socials">
+                    <h3 class="footer__socials__title">Follow us</h3>
+                    <ul class="footer__socials__list">
+                        <li class="footer__social__item">
+                            <a href="" class="footer__socials__link"><span class="icon-slack"></span>#codeconf2025</a>
                         </li>
-                        <li class="social__item">
-                            <a href="" class="socials__link"><span class="icon-tw"></span>@codeconf2025</a>
+                        <li class="footer__social__item">
+                            <a href="" class="footer__socials__link"><span class="icon-tw"></span>@codeconf2025</a>
                         </li>
                     </ul>
                 </div>
-                <div class="helpdesk">
+                <div class="footer__helpdesk">
                     <p>Helpdesk Call-center</p>
                     <p><strong>+1 702-892-0711</strong></p>
                     <p>(speaker's support)</p>
                 </div>
-                <div class="legal">
+                <div class="footer__legal">
                     <p>Orgnasised by WebeesMeetups.com</p>
                     <p>copyright 2025</p>
                 </div>
             </div>
         </footer>
-    </div>
+    </section>
 </body>
 </html>

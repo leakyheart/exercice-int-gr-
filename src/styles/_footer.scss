@@ -1,0 +1,34 @@
+.footer {
+    padding-inline: 2rem;
+    background: grey;
+    &__ticket{
+        text-align: center;
+    }
+    &__info {
+        display : flex; 
+        gap: 1rem;
+    }
+    &__image {
+        width: 50%;
+        object-fit: cover;
+    }
+    &__sponsors__list {
+        display: flex;
+        justify-content: center;
+        gap : 1rem
+    }
+    &__group {
+        display: flex;
+        gap: 1rem;
+        justify-content: space-between;
+    }
+    &__socials{
+        border: 1px solid #000;
+        padding: 1rem;
+        &__list{
+            display: flex;
+            gap: 1rem;
+        }
+    }
+}
+

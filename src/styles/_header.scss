@@ -2,7 +2,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding-inline: 2rem;
+    padding-block: 1rem;
+    font-family:maven ;
+    font-size: 1.1rem;
     &__logo_img {
         height: 4rem;
     }
@@ -42,4 +45,11 @@ h1 {
     .header__nav_mobile {
         display: none; 
     }
+}
+
+.icon-loop {
+    color: var(--orange);
+    background: none;
+    border: none;
+    font-size: 1.2rem;
 }

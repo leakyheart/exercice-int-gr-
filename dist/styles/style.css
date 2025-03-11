@@ -8,10 +8,14 @@ body {
   margin: 0;
   font-family: museo;
   font-weight: 300;
+  color: var(--black);
+  background: var(--bg-grey);
 }
 
 img {
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 ul {
@@ -20,6 +24,33 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+button {
+  font-family: maven;
+  text-transform: uppercase;
+}
+
+p, h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+  line-height: 1.3rem;
+}
+
+a {
+  color: var(--black);
+}
+
+:root {
+  --light-orange: #FFEEE6;
+  --orange: #FF3801;
+  --purple: #644BF1;
+  --white: #FFFFFF;
+  --bg-grey: #F9F9F9;
+  --black: #343237 ;
+  --name-black: #392E57 ;
+  --blue: #00C3C5 ;
+  --grey: #9A95A9 ;
 }
 
 @font-face {
@@ -143,11 +174,18 @@ a {
   font-family: "maven";
   src: url("../fonts/maven_Pro/MavenPro-VariableFont_wght.ttf") format("truetype");
 }
+@font-face {
+  font-family: "leaguespartan";
+  src: url("../fonts/League_Spartan/LeagueSpartan-VariableFont_wght.ttf") format("truetype");
+}
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding-inline: 2rem;
+  padding-block: 1rem;
+  font-family: maven;
+  font-size: 1.1rem;
 }
 .header__logo_img {
   height: 4rem;
@@ -186,37 +224,299 @@ h1 {
     display: none;
   }
 }
+.icon-loop {
+  color: var(--orange);
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+}
+
 .banner {
   height: 10rem;
   position: relative;
+  background-color: var(--purple);
   display: flex;
+}
+.banner::before {
+  content: "";
+  height: 2rem;
+  width: 10rem;
+  background: url("../images/elts/pattern-stripes-left.png");
+  background-size: cover;
+  position: absolute;
+  inset-block: 0 auto;
+  margin-block-start: -1rem;
+}
+.banner::after {
+  content: "";
+  height: 2rem;
+  width: 23rem;
+  background: url("../images/elts/pattern-stripes-right.png");
+  background-size: cover;
+  position: absolute;
+  inset-inline: auto 0;
+  inset-block: 0 auto;
+  margin-block-start: -1rem;
+}
+.banner__inside {
+  margin-inline-start: 5%;
+  display: flex;
+  gap: 1rem;
   justify-content: center;
   align-items: flex-end;
-  background-color: purple;
-  padding-inline-start: 5rem;
+}
+.banner picture {
+  display: flex;
 }
 .banner img {
   height: 14rem;
   width: 14rem;
 }
 .banner__text {
-  width: 25%;
+  width: 41%;
+  color: var(--white);
+  margin: 2rem;
+}
+.banner__title {
+  font-size: 2rem;
+  margin-block-end: 0.8rem;
 }
 
+/*.banner {
+    height: 10rem;
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: var(--purple);
+    //padding-inline-start: 5rem;
+    //position: relative;
+    &::before {
+        content: "";
+        height: 2rem;
+        width: 10rem;
+        background: url("../images/elts/pattern-stripes-left.png");
+        background-size: cover;
+        position: absolute;
+        inset-block: 0 auto;
+        //margin-inline-start: -85rem;
+    }
+    &::after {
+        content: "";
+        height: 2rem;
+        width: 23rem;
+        background: url("../images/elts/pattern-stripes-right.png");
+        background-size: cover;
+        position: absolute;
+        inset-inline: auto 0;
+        inset-block: 0 auto;
+        //margin-block-end: -0.5rem;
+    }
+    picture {
+        display: flex;
+    }
+    img {
+        height: 14rem;
+        width: 14rem;
+    }
+    &__text {
+        width: 41%;
+        color: var(--white);
+        margin: 2rem;
+    }
+    &__title {
+        font-size: 2rem;
+        margin-block-end: 0.8rem;
+    }
+}*/
 .speakers__breadcrumb__list {
   display: flex;
-}
-.speakers__container {
-  padding: 1rem;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
 }
+.speakers__container {
+  padding-inline: 2rem;
+  padding-block: 0.5rem 5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
 
-.speaker {
-  border: solid 1px #888;
+.speaker__cover {
+  position: relative;
+}
+.speaker__cover img {
+  aspect-ratio: 1;
+}
+.speaker__cover::after {
+  content: "";
+  height: 2rem;
+  width: 10rem;
+  background: url("../images/elts/pattern_stripes.png");
+  background-size: cover;
+  position: absolute;
+  inset-inline: auto 0;
+  inset-block: auto 0;
+  margin-block-end: -0.5rem;
+}
+.speaker__cover__button {
+  width: 6rem;
+  height: 6rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  border-radius: 20rem;
+  background: var(--orange);
+  color: var(--white);
+  border: none;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.speaker__info {
+  padding: 1rem;
+}
+.speaker__info h3 {
+  margin-block-end: 0.6rem;
+}
+.speaker__details {
+  background: var(--light-orange);
+  padding-inline: 1rem;
+  padding-block: 1.5rem;
+}
+.speaker__name {
+  font-weight: 300;
+  color: var(--name-black);
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  margin-block-end: 4rem;
+}
+.speaker__location {
+  font-family: leaguespartan;
+  font-size: 1.3rem;
+  color: var(--grey);
+}
+.speaker__title {
+  font-weight: 500;
+  font-size: 1.15rem;
+  margin-block-end: 0.3rem;
+}
+.speaker__text {
+  font-family: maven;
+  font-size: 0.9rem;
+}
+.speaker__footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-block-start: 4rem;
+}
+.speaker__time {
+  font-family: leaguespartan;
+  font-weight: 370;
+}
+.speaker__button {
+  background: none;
+  border: 1.5px solid var(--orange);
+  color: var(--orange);
+  border-radius: 20rem;
+  padding-block: 0.5rem 0.6rem;
+  padding-inline: 1rem;
+  font-size: 0.9rem;
 }
 
 .form_speaker {
+  background: var(--white);
+  box-shadow: 1rem 1rem 2rem 1rem rgba(136, 136, 136, 0.2666666667);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+}
+.form_speaker__text {
+  width: 30rem;
+}
+.form_speaker__prompts {
+  width: 50rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.form_speaker__name {
+  grid-area: 1/1;
+}
+
+.form_speaker__mail {
+  grid-area: 1/2;
+}
+
+.form_speaker__subject {
+  grid-area: 2/1;
+}
+
+.form_speaker__keywords {
+  grid-area: 2/2;
+}
+
+.form_speaker__detail {
+  grid-area: 3/1/-1/-1;
+}
+
+input {
+  width: 100%;
+}
+
+label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1;
+  overflow: hidden;
+  border: 0;
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  white-space: no wrap;
+}
+
+.footer {
+  padding-inline: 2rem;
+  background: grey;
+}
+.footer__ticket {
+  text-align: center;
+}
+.footer__info {
+  display: flex;
+  gap: 1rem;
+}
+.footer__image {
+  width: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.footer__sponsors__list {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.footer__group {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.footer__socials {
+  border: 1px solid #000;
+  padding: 1rem;
+}
+.footer__socials__list {
+  display: flex;
+  gap: 1rem;
 }/*# sourceMappingURL=style.css.map */
