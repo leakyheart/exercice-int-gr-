@@ -3,7 +3,7 @@
 .banner {
     height: 10rem;
     position: relative;
-    background-color: var(--purple);
+    background: var(--gradient-lin);
     display: flex;
     //padding-inline-start: 5rem;
     //position: relative;
@@ -121,6 +121,10 @@
 
 .speaker {
     //border: solid 1px #888;
+    &__front {
+        height: 20rem;
+        border: solid 1px #888;
+    }
     &__cover{
         //border: 1px solid #000;
         //display: flex;
@@ -166,7 +170,11 @@
     &__details {
         background: var(--light-orange);
         padding-inline: 1rem;
-        padding-block: 1.5rem;
+        padding-block: 1.7rem;
+        height: 20rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
     &__name {
         font-weight: 300;
@@ -174,7 +182,7 @@
         display: flex;
         flex-direction: column;
         font-size: 1.5rem;
-        margin-block-end: 4rem;
+        //margin-block-end: 4rem;
     }
     &__location {
         font-family: leaguespartan;
@@ -196,7 +204,7 @@
         justify-content: center;
         align-items: center;
         gap : 1rem;
-        margin-block-start: 4rem;
+        //margin-block-start: 4rem;
     }
     &__time {
         font-family: leaguespartan;
@@ -216,23 +224,82 @@
 
 //form
 .form_speaker {
+    padding-block: 6rem 4rem;
     background: var(--white);
-    box-shadow: 1rem 1rem 2rem 1rem #8884;
+    box-shadow: 0rem -1rem 2rem 0rem #8884;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     &__text {
-        width: 30rem;
+        width: 60%;
+        font-family: maven;
+        font-size: 1.2rem;
+    }
+    &__title {
+        text-transform: uppercase;
+        font-size: 2rem;
+        color: var(--purple);
+        margin-block-end: 2rem;
+    }
+    &__sec_title{
+        font-family: museo;
+        font-weight: 500;
+        font-size: 1.6rem;
+        margin-block: 1rem;
+    }
+    p {
+        line-height: 2rem;
     }
     &__prompts {
+        margin: 4rem;
         width: 50rem; 
         display : grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(4, 1fr);
-        gap: 1rem;
+        gap: 2.5rem;
+    }
+    &__button {
+        background: none;
+        border: 1.5px solid var(--orange);
+        color: var(--orange);
+        border-radius: 20rem;
+        padding-block: 0.5rem 0.6rem;
+        padding-inline: 1rem;
+        font-size: 1.2rem;
+        margin-block-end: 2rem;
+    }
+    &__paragraph_outro{
+        font-size: 1.6rem;
+        margin-block-end: 1rem;
+        width: 24%;
     }
 }
+
+input {
+    width: 100%;
+    border: none;
+    box-shadow: inset 0 -1px 0 #cdcdcd;
+    height: 2rem;
+    //outline: none;
+}
+label {
+    position: absolute;
+    width: 1px;
+    height: 1px; 
+    padding: 0;
+    margin: -1;
+    overflow: hidden;
+    border: 0; 
+    clip-path: inset(50%);
+    white-space: no wrap
+}
+::placeholder{
+    font-family: maven;
+    font-size: 1.2rem;
+    color: var(--black);
+}
+
 .form_speaker__name {
     grid-area: 1/1;
 }
@@ -246,21 +313,19 @@
     grid-area: 2/2;
 }
 .form_speaker__detail {
-    //border: 1px solid #888;
     grid-area: 3/1/-1/-1;
+    //border: 1px solid #cdcdcd;
+    //padding: 0.8rem;
 }
 
-input {
-    width: 100%;
+#input_detail {
+    box-shadow: none;
+    height: 8rem;
+    border: 1px solid #cdcdcd;
+    padding: 0.8rem;
+    &::placeholder {
+        position: absolute;
+        font-size: 1rem;
+    }
 }
-label {
-    position: absolute;
-    width: 1px;
-    height: 1px; 
-    padding: 0;
-    margin: -1;
-    overflow: hidden;
-    border: 0; 
-    clip-path: inset(50%);
-    white-space: no wrap
-}
+

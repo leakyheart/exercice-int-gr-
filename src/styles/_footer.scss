@@ -1,9 +1,8 @@
 .footer {
     padding-inline: 2rem;
-    background: grey;
-    &__ticket{
-        text-align: center;
-    }
+    padding-block: 6rem 2rem;
+    background: var(--black);
+    color: var(--white);
     &__info {
         display : flex; 
         gap: 1rem;
@@ -32,3 +31,20 @@
     }
 }
 
+.ticket{
+    margin-block-end:-3.5rem ;
+    text-align: center;
+    background: var(--white);
+    &__button {
+        background: var(--orange);
+        border: none;
+        color: var(--white);
+        border-radius: 20rem;
+        padding-block: 1.3rem 1.5rem;
+        padding-inline: 1.3rem;
+        font-size: 1.5rem;
+        font-family: maven;
+        text-transform: lowercase;
+        font-weight: 600;
+    }
+}
