@@ -23,7 +23,7 @@
     &__price {
         padding: .1rem 1rem .2rem;
         background: var(--black);
-        z-index: 10;
+        z-index: 3;
         position: relative;
         color: var(--white);
         font-size: 0.9rem;
@@ -58,6 +58,9 @@
     &__image {
         width: 50%;
         object-fit: cover;
+    }
+    &__help{
+        display: none;
     }
     &__sponsors{
         padding-block-end: 2rem;
@@ -116,3 +119,119 @@
 
 
 
+@media screen and (max-width: $tablet ) {
+    .footer{
+        display: block;
+        padding-inline: 0;
+        &__image {
+            display: none;
+        }
+        &__info {
+            display: block;
+           text-align: center;
+           padding-inline: 1.5rem;
+           margin-block-end: 0;
+        }
+        &__title {
+            color: var(--light-orange);
+            font-family: museo;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+        &__location{
+            border: 1px solid var(--grey);
+            border-radius: 20rem;
+            padding-block: 0.5rem;
+            margin-block: 0.8rem;
+        }
+        &__paragraph {
+            text-align: start;
+            font-family: maven;
+            font-size: 0.9rem;
+            line-height: 1.7rem;
+        }
+        &__help{
+            margin-block-start: 1.5rem;
+            display: block;
+            text-align: start;
+        }
+        &__sponsors{
+            padding: 0;
+            padding-inline: 1.5rem;
+            margin-block: 2rem;
+            &__list {
+                padding: 0;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                gap : 1rem;
+            }
+        }
+        &__group {
+            display: block;
+        }
+        &__socials{
+            border-radius: 0;
+            &__title{
+                color: var(--light-orange);
+            }
+        }
+        &__helpdesk {
+            display: none;
+        }
+        &__legal{
+            padding: 1.5rem;
+            p{
+                display: block;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: $desktop ) {
+    .footer {
+        &__image {
+            display: none;
+        }
+        &__info{
+            gap: 1.5rem;
+            align-items: center;
+        }
+        &__text {
+            width: 70%
+        }
+        &__help{
+            margin-block-start: 1.5rem;
+            display: block;
+            text-align: start;
+            p{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        &__sponsors{
+            padding-block-end: 1rem;
+            &__list {
+                padding: 0;
+                gap : 2rem
+            }
+        }
+        &__group {
+            display: flex;
+            gap: 3rem;
+            justify-content: stretch;
+            align-items: center;
+        }
+        &__socials{
+            width: 65%;
+            padding: 1rem;
+            &__list{
+                gap: 3rem
+            }
+        }
+        &__helpdesk {
+            display: none;
+        }
+    }
+}

@@ -17,33 +17,35 @@
                      <img src="images/logos_assets_codeconf/logo2023.svg" alt="CodeConf 2025" class="header__logo_img">
                  </a>
             </div>
-            <nav class="header__nav_desktop">
-                <ul class="header__nav_desktop__list">
-                    <li class="header__nav_desktop__item">
-                        <a href="" class="header__nav_desktop__link" >Event</a>
-                    </li>
-                    <li class="separator">|</li>
-                    <li class="header__nav_desktop__item">
-                        <a href="" class="header__nav_desktop__link" >Speakers</a>
-                    </li>
-                    <li class="separator">|</li>
-                    <li class="header__nav_desktop__item">
-                        <a href="" class="header__nav_desktop__link" >Team</a>
-                    </li>
-                    <li class="separator">|</li>
-                    <li class="header__nav_desktop__item">
-                        <a href="" class="header__nav_desktop__link" >Contact</a>
-                    </li>
-                    <li class="header__nav_desktop__item">
-                        <a href="" class="header__nav_desktop__link" ><span class="icon-schedule"> </span>Schedule</a>
-                    </li>
-                    <li class="header__nav_desktop__item"><button class="icon-loop"></button></li>
-                </ul>
-            </nav>
-
-            <nav class="header__nav_mobile">
-                <span class="icon-schedule"></span>
-                <span class="icon-burger"></span>
+            <nav class="header__nav">
+                <input type="checkbox" aria-hidden="true" class="trigger">
+                <div class="mobile">
+                    <span class="icon-schedule"></span>
+                    <span class="icon-burger"><hr><hr><hr></span>
+                </div>
+                <div class="header__nav__menu">
+                    <a href="" class="header__nav__ticket">GetTickets</a>
+                    <ul class="header__nav__list">
+                        <li class="header__nav__item">
+                            <a href="" class="header__nav__link" >Event</a>
+                        </li>
+                        <li class="header__nav__item">
+                            <a href="" class="header__nav__link" >Speakers</a>
+                        </li>
+                        <li class="header__nav__item">
+                            <a href="" class="header__nav__link" >Team</a>
+                        </li>
+                        <li class="header__nav__item">
+                            <a href="" class="header__nav__link" >Contact</a>
+                        </li>
+                    </ul>
+                    <ul class="header__nav__icons">
+                        <li class="header__nav__item">
+                            <a href="" class="header__nav__link" ><span class="icon-schedule"> </span>Schedule</a>
+                        </li>
+                        <li class="header__nav__item"><button class="icon-loop"></button></li>
+                    </ul>
+                </div>
             </nav>
         </header>
 
@@ -92,6 +94,83 @@
                         <div class="speaker__front">
                             <div class="speaker__cover">
                                 <img src="images/orators/chris@3x.jpg" alt="Chris Coyier">
+                                <button class="speaker__cover__button hidden_btn">More <span>info</span></button>
+                            </div>
+                            <div class="speaker__info">
+                                <h3 class="speaker__name">Chris <span>Coyier</span></h3>
+                                <p class="speaker__location">Milwaukee, WI</p>
+                            </div>
+                        </div>
+                        <div class="speaker__details hidden_mobile hidden_desktop">
+                            <h3 class="speaker__name">Chris Coyier</h3>
+                            <div>
+                                <h4 class="speaker__title">The All-Powerful Front-End Developer</h4>
+                                <p class="speaker__text">Without servers, we'd have no way to share our creations with the world</p>   
+                            </div>
+                            <footer class="speaker__footer">
+                                <p class="speaker__time"><time datetime="">09:30 am</time>  <span class="separator">|</span> <span class="speaker__place">R1</span></p>
+                                <button class="speaker__button">About</button>
+                            </footer>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <div class="speaker">
+                        <div class="speaker__front">
+                            <div class="speaker__cover">
+                                <img src="images/orators/chris@3x.jpg" alt="Chris Coyier">
+                                <button class="speaker__cover__button">More <span>info</span></button>
+                            </div>
+                            <div class="speaker__info">
+                                <h3 class="speaker__name">Chris <span>Coyier</span></h3>
+                                <p class="speaker__location">Milwaukee, WI</p>
+                            </div>
+                        </div>
+                        <div class="speaker__details">
+                            <h3 class="speaker__name">Chris Coyier</h3>
+                            <div>
+                                <h4 class="speaker__title">The All-Powerful Front-End Developer</h4>
+                                <p class="speaker__text">Without servers, we'd have no way to share our creations with the world</p>   
+                            </div>
+                            <footer class="speaker__footer">
+                                <p class="speaker__time"><time datetime="">09:30 am</time>  <span class="separator">|</span> <span class="speaker__place">R1</span></p>
+                                <button class="speaker__button">About</button>
+                            </footer>
+                        </div>
+                    </div>
+
+                    <div class="speaker">
+                        <div class="speaker__front">
+                            <div class="speaker__cover">
+                                <img src="images/orators/chris@3x.jpg" alt="Chris Coyier">
+                                <button class="speaker__cover__button">More <span>info</span></button>
+                            </div>
+                            <div class="speaker__info">
+                                <h3 class="speaker__name">Chris <span>Coyier</span></h3>
+                                <p class="speaker__location">Milwaukee, WI</p>
+                            </div>
+                        </div>
+                        <div class="speaker__details">
+                            <h3 class="speaker__name">Chris Coyier</h3>
+                            <div>
+                                <h4 class="speaker__title">The All-Powerful Front-End Developer</h4>
+                                <p class="speaker__text">Without servers, we'd have no way to share our creations with the world</p>   
+                            </div>
+                            <footer class="speaker__footer">
+                                <p class="speaker__time"><time datetime="">09:30 am</time>  <span class="separator">|</span> <span class="speaker__place">R1</span></p>
+                                <button class="speaker__button">About</button>
+                            </footer>
+                        </div>
+                    </div>
+
+                    <div class="speaker">
+                        <div class="speaker__front">
+                            <div class="speaker__cover">
+                                <img src="images/orators/chris@3x.jpg" alt="Chris Coyier">
                                 <button class="speaker__cover__button">More <span>info</span></button>
                             </div>
                             <div class="speaker__info">
@@ -116,60 +195,8 @@
 
 
 
-                    <div class="speaker">
-                        <div class="speaker__front">
-                            <div class="speaker__images">
-                                <img src="images/orators/chris@3x.jpg" alt="Chris Coyier">
-                                <button class="speaker__images__button">More info</button>
-                            </div>
-                            <h3 class="speaker__name">Chris Coyier</h3>
-                            <p class="speaker__location">Milwaukee, WI</p>
-                        </div>
-                        <div class="speaker__back">
-                            <h3 class="speaker__name">Chris Coyier</h3>
-                            <h4 class="speaker__title">The All-Powerful Front-End Developer</h4>
-                            <p class="speaker__text">Without servers, we'd have no way to share our creations with the world</p>
-                            <p class="speaker__time">09:30 am</p>
-                            <p class="speaker__place">R1</p>
-                            <button class="speaker__button">About</button>
-                        </div>
-                    </div>
-                    <div class="speaker">
-                        <div class="speaker__front">
-                            <div class="speaker__images">
-                                <img src="images/orators/chris@3x.jpg" alt="Chris Coyier">
-                                <button class="speaker__images__button">More info</button>
-                            </div>
-                            <h3 class="speaker__name">Chris Coyier</h3>
-                            <p class="speaker__location">Milwaukee, WI</p>
-                        </div>
-                        <div class="speaker__back">
-                            <h3 class="speaker__name">Chris Coyier</h3>
-                            <h4 class="speaker__title">The All-Powerful Front-End Developer</h4>
-                            <p class="speaker__text">Without servers, we'd have no way to share our creations with the world</p>
-                            <p class="speaker__time">09:30 am</p>
-                            <p class="speaker__place">R1</p>
-                            <button class="speaker__button">About</button>
-                        </div>
-                    </div>
-                    <div class="speaker">
-                        <div class="speaker__front">
-                            <div class="speaker__images">
-                                <img src="images/orators/chris@3x.jpg" alt="Chris Coyier">
-                                <button class="speaker__images__button">More info</button>
-                            </div>
-                            <h3 class="speaker__name">Chris Coyier</h3>
-                            <p class="speaker__location">Milwaukee, WI</p>
-                        </div>
-                        <div class="speaker__back">
-                            <h3 class="speaker__name">Chris Coyier</h3>
-                            <h4 class="speaker__title">The All-Powerful Front-End Developer</h4>
-                            <p class="speaker__text">Without servers, we'd have no way to share our creations with the world</p>
-                            <p class="speaker__time">09:30 am</p>
-                            <p class="speaker__place">R1</p>
-                            <button class="speaker__button">About</button>
-                        </div>
-                    </div>
+             
+           
                 </div>
             </section>
 
@@ -226,6 +253,10 @@
                 <p class="footer__paragraph">The Las Vegas Convention Center (LVCC), located adjacent to the Las Vegas Strip, encompasses approximately 3.2 million square feet with exhibit space of 2 million square feet and meeting space of nearly 250,000 square feet.</p>
                 </div>
                 <img src="images/page-picture/lasvegas_conventioncenter.png" alt="the Las Vegas convention center" class="footer__image">
+                <div class="footer__help">
+                    <p>Helpdesk Call-center <strong>+1 702-892-0711</strong></p>
+                    <p class="footer__yellow">(speaker's support)</p>
+                </div>
             </section>
             <div class="footer__sponsors">
                 <ul class="footer__sponsors__list">
@@ -261,5 +292,6 @@
             </div>
         </footer>
     </section>
+    <script src="scripts/main.js" defer></script>
 </body>
 </html>
