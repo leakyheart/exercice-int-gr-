@@ -378,6 +378,11 @@ label {
             &__button {
                 display: none;
             }
+            &:hover{
+                .speaker__cover__button{
+                    display: none;
+                }
+            }
         }
         &__details {
             padding: 1.5rem;

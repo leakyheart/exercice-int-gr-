@@ -675,6 +675,9 @@ label {
   .speaker__cover__button {
     display: none;
   }
+  .speaker__cover:hover .speaker__cover__button {
+    display: none;
+  }
   .speaker__details {
     padding: 1.5rem;
   }

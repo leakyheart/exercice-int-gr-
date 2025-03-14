@@ -20,6 +20,6 @@ $speakerBtn.addEventListener('click', e=>{
 
 
 
-//je sais que ce code marchera pas pour toute la page et faut faire une boucle pour que ça marche partout mais franchement ça marche un peu sur un c'est déjà une petite victoire pour moi
+//je sais que ce code marchera pas pour toute la page et faut faire une boucle pour que ça marche partout mais franchement ça marche un peu sur un c'est déjà une petite victoire pour moi (oui je sais mon javascript pour le desktop a cassé celui du mobile je sais pas comment régler ça et il est 15h mdr)
 
 
