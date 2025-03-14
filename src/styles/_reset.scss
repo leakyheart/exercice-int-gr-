@@ -28,12 +28,13 @@ a {
 button {
     font-family: maven;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 p, h1, h2, h3, h4 {
     margin: 0; 
     padding: 0; 
-    line-height: 1.3rem;
+    line-height: 1.5rem;
 }
 
 a{

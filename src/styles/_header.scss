@@ -27,6 +27,13 @@ h1 {
     white-space: no wrap
 }
 
+.icon-loop {
+    color: var(--orange);
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+}
+
 @media screen and (max-width: $desktop) {
     .header__nav_desktop {
         display: none;
@@ -47,9 +54,3 @@ h1 {
     }
 }
 
-.icon-loop {
-    color: var(--orange);
-    background: none;
-    border: none;
-    font-size: 1.2rem;
-}
